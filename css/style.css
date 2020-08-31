@@ -19,9 +19,17 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [side-start] 8rem [side-end full-start] minmax(6rem, 1fr) repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    padding: 4rem;
-    font-size: 3rem; }
+
+.heading-4 {
+  font-size: 1.9rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading__dark {
+  color: #54483A; }
+
+.heading__light {
+  color: #f9f7f6; }
 
 .sidebar {
   background-color: #c69963;
@@ -37,8 +45,26 @@ body {
   grid-column: col-start 7 / full-end; }
 
 .features {
-  background-color: #aaa;
-  grid-column: col-start 1 / col-end 8; }
+  grid-column: col-start 1 / col-end 8;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  margin: 15rem 0rem; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+  align-content: start; }
+  .feature__icon {
+    grid-row: 1/span 2;
+    fill: #c69963;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.7rem; }
 
 .story__pictures {
   background-color: #c69963;
