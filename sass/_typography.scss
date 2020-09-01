@@ -1,25 +1,52 @@
-.heading-1 {
-
-}
-
-.heading-2 {
-    
-}
-
-.heading-3 {
-    
-}
-
-.heading-4 {
-    font-size: 1.9rem;
+%heading {
     font-family: $font-display;
     font-weight: 400;
 }
 
-.heading__dark {
+.heading-1 {
+    @extend %heading;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-style: italic;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: $color-primary;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+}
+
+.heading--dark {
     color: $color-grey-dark-1;
 }
 
-.heading__light {
+.heading--light {
     color: $color-grey-light-1;
 }
+
+.btn {
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1.6rem 3rem;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}
+
+.mb-2 { margin-bottom: 2rem; }
