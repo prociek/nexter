@@ -2,4 +2,56 @@
     background-color: $color-primary;
     grid-column: side-start / side-end;
     grid-row: 1 / -1;
+    display: flex;
+    justify-content: center;
+
+
+    &__box {
+        cursor: pointer;
+        margin-top: 2rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        position: relative;
+        transition: all .4s;
+
+        &:hover .sidebar__btn {
+            
+            &::before {
+                transform: translateY(-1.3rem);
+            }
+    
+            &::after {
+                transform: translateY(1.1rem);
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 2px;
+        border: none;
+        border-radius: 0;
+        background-color: rgba(#fff, .9);
+        position: absolute;
+        top: 48%;
+        cursor: pointer;
+        
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: rgba(#fff, .9);
+        }
+
+        &::before {
+            transform: translateY(-1.5rem);
+        }
+
+        &::after {
+            transform: translateY(1.3rem);
+        }
+    }
 }
