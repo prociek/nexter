@@ -7,8 +7,16 @@
 
     display: grid;
     grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-m) {
+        grid-column: full-start / full-end;
+    }
+
+    @media only screen and (max-width: $bp-s) {
+        padding: 2rem;
+    }
 
     &__logo {
         height: 3rem;
@@ -46,7 +54,8 @@
         filter: brightness(70%);
 
         & > * {
-            height: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 100%;
         }
     }
 }

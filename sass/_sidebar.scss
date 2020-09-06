@@ -5,6 +5,12 @@
     display: flex;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-l) {
+        grid-column: full-start / -1;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+    }
+
 
     &__box {
         cursor: pointer;
@@ -13,6 +19,11 @@
         height: 4.5rem;
         position: relative;
         transition: all .4s;
+
+        @media only screen and (max-width: $bp-l) {
+            margin-top: .7rem;
+            margin-right: 2rem;
+        }
 
         &:hover .sidebar__btn {
             

@@ -7,6 +7,10 @@
     @extend %heading;
     font-size: 4.5rem;
     color: $color-grey-light-1;
+
+    @media only screen and (max-width: $bp-s) {
+        font-size: 3.5rem;
+    }
 }
 
 .heading-2 {
@@ -42,7 +46,7 @@
     cursor: pointer;
     font-family: $font-display;
     font-size: 1.6rem;
-    padding: 1.6rem 3rem;
+    padding: 1.6rem 2.8rem;
     background-color: $color-primary;
     color: $color-grey-light-1;
     text-transform: uppercase;
